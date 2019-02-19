@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct c_string_t{
+typedef struct{
 
     char *  _strptr;
     long    _length;
@@ -27,8 +27,8 @@ long        c_string_get_mem_size   ( const c_string_t* ptr);   /// Obtener memo
 long        c_string_get_unused_mem ( const c_string_t* ptr);   /// Obtener espacio no ocupado por la cadena.
 
 
-c_string_t* c_string_append         ( c_string_t* ptrD, const c_string_t* ptrO  ); /// Agregar al final del c_string de Destino
-c_string_t* c_string_append         ( c_string_t* ptrD, const char* str);
+c_string_t* c_string_append_c_string( c_string_t* ptrD, const c_string_t* ptrO  ); /// Agregar al final del c_string de Destino
+c_string_t* c_string_append_str     ( c_string_t* ptrD, const char* str);
 c_string_t* c_string_concat         ( const c_string_t* ptrD, const c_string_t* ptrO ); /// Concatena y produce un nuevo c_string
 
 

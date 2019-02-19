@@ -139,7 +139,7 @@ long c_string_get_unused_mem( const c_string_t* ptr){
     Error:
         -   NULL            ->  Si ptrDe, ptrOr o sus strptr son NULL.
 */
-c_string_t* c_string_append( c_string_t* ptrDe, const c_string_t* ptrOr  ){
+c_string_t* c_string_append_c_string( c_string_t* ptrDe, const c_string_t* ptrOr  ){
 
     long    str_memsize;
     char    *aux_pointer;
@@ -172,6 +172,11 @@ c_string_t* c_string_append( c_string_t* ptrDe, const c_string_t* ptrOr  ){
 
     return ptrDe;
 
+}
+
+c_string_t* c_string_append_str( c_string_t* ptrD, const char* str){
+    //TODO: Implementar esto, muy similar a la otra.
+    return ptrD;
 }
 
 /**
